@@ -34,7 +34,13 @@
 //     console.log("");
 // }
 
-let groceryList = ['Arroz', 'Feijão', 'Alface', 'Melancia'];
-for (var lista = 0; lista < groceryList.length; lista += 1){
-    console.log(groceryList[lista]);
-}
+// let groceryList = ['Arroz', 'Feijão', 'Alface', 'Melancia'];
+// for (var lista = 0; lista < groceryList.length; lista += 1){
+//     console.log(groceryList[lista]);
+// 
+
+// let names = ['João', 'Maria', 'Antônio', 'Margarida'];
+
+// for(let nomes of names){
+//     console.log(nomes);
+// }
