@@ -96,3 +96,20 @@ const colorFriday = (event) => {
 }
 let december = [2, 9, 16, 23, 30]
 colorFriday(december);
+//parte 6
+const dayZoom = () => {
+    let days = document.querySelector('#days');
+    days.addEventListener('mouseover', (event) => {
+        event.target.style.fontWeight = '700';
+        event.target.style.color = 'black';
+    })
+}
+const dayNoZoom = () => {
+    let days = document.querySelector('#days'); 
+    days.addEventListener('mouseout', (event) => {
+        event.target.style.fontWeight = '200';
+        event.target.style.color = '#777';
+    })
+}
+dayZoom();
+dayNoZoom();
