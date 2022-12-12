@@ -40,10 +40,32 @@ const calendary = () => {
 calendary();
 //parte 2
 const holidays = (button) => {
-    const holidays = document.querySelector('.button-container');
+    const holidays = document.querySelector('.buttons-container');
     let buttonHoliday = document.createElement('button');
+    let buttonID = 'btn-holiday';
     buttonHoliday.innerHTML = button;
-    buttonHoliday.id = 'btn-holiday';
+    buttonHoliday.id = buttonID;
     holidays.appendChild(buttonHoliday);
 }
 holidays('Feriados');
+//parte 3
+const colorHoliday = () => {
+    const colorHoliday = document.querySelectorAll('.holiday');
+    const button = document.querySelector('#btn-holiday');
+    let newColor = 'red';
+    let colorLetter = '#777';
+    let backgroundColor = 'rgb(238, 238, 238)';
+    let newBackgroundColor = 'rgb(182, 182, 182)';
+    button.addEventListener('click', () => {
+        for (index = 0; index < colorHoliday.length; index += 1) {
+            if (colorHoliday[index].style.color === newColor || colorHoliday[index].style.backgroundColor === newBackgroundColor) {
+                colorHoliday[index].style.color = colorLetter;
+                colorHoliday[index].style.backgroundColor = backgroundColor;
+            } else {
+                colorHoliday[index].style.color = newColor;
+                colorHoliday[index].style.backgroundColor = newBackgroundColor;
+            }
+        }
+    });
+}
+colorHoliday();
