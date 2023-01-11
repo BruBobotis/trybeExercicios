@@ -1,0 +1,28 @@
+div:hover {
+    border: 2px solid black;
+    border-radius: 1px;
+}
+#primaria {
+    color: red;
+}
+#secundaria {
+    color: orange;
+}
+#complementar {
+    color: blueviolet;
+    height: 100px;
+    width: 200px;
+    left: 400px;
+    text-align: center;
+    
+}
+#escura {
+    color: darkgray;
+}
+#clara {
+    color: tomato;
+}
+h3 {
+    text-decoration:underline;
+    font-style: italic;
+}
