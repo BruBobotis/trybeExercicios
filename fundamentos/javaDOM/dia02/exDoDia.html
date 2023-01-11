@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+        //parte1
+      const elementoH1 = document.createElement('h1');
+      elementoH1.innerText = 'TrybeTrip - Agência de Viagens';
+      document.body.appendChild(elementoH1);
+        //parte2 
+      const mainContent = document.createElement('main');
+      mainContent.className = 'main-content';
+      document.body.appendChild(mainContent);
+        //parte3
+      const sectionPrincipal = document.createElement('section');
+      sectionPrincipal.className = 'center-content';
+      mainContent.appendChild(sectionPrincipal);
+        //parte4
+      const paragrafotft = document.createElement('p');
+      paragrafotft.innerText = 'TFT é bom demais ta maluco filho';
+      sectionPrincipal.appendChild(paragrafotft);
+        //parte5
+      const sectionEsquerda = document.createElement('section');
+      sectionEsquerda.className = 'left-content';
+      mainContent.appendChild(sectionEsquerda);
+        //parte6
+      const sectionDireita = document.createElement('section');
+      sectionDireita.className = 'right-content';
+      mainContent.appendChild(sectionDireita);
+        //parte7
+      const smallImage = document.createElement('img');
+      smallImage.src = 'https://picsum.photos/200';
+      smallImage.className = 'small-image';
+      sectionEsquerda.appendChild(smallImage);
+        //parte8
+      const listaNumeros = [
+        'um','dois','três','quatro','cinco','seis','sete','oito','nove','dez',
+      ]
+      const elementUl = document.createElement('ul')
+      sectionDireita.appendChild(elementUl);
+      for (let numbers in listaNumeros) {
+        const elementLi = document.createElement('li');
+        elementLi.innerHTML = listaNumeros[numbers];
+        elementUl.appendChild(elementLi);
+      }
+        //parte9
+      const primeiroH3 = document.createElement('h3');
+      mainContent.appendChild(primeiroH3);
+      const segundoH3 = document.createElement('h3');
+      mainContent.appendChild(segundoH3);
+      const terceiroH3 = document.createElement('h3');
+      mainContent.appendChild(terceiroH3);
+        //parte10
+      const title = document.querySelector('h1');
+      title.className = 'title';
+        //parte11
+      const elementsH3 = document.getElementsByTagName('h3');
+      for (let index = 0; index < 3; index += 1){
+        elementsH3[index].className = 'description';
+      }
+        //parte12
+      mainContent.removeChild(sectionEsquerda);
+        //parte13
+      sectionDireita.style.marginRight = 'auto';
+        //parte14
+      sectionPrincipal.style.backgroundColor = 'green';
+        //parte15
+      const ul = document.getElementsByTagName('ul')[0];
+      ul.lastChild.remove();
+      ul.lastChild.remove();
+        //parte16 BONUS
+      sectionDireita.style.backgroundColor = 'cyan';
+    </script>
+  </body>
+</html>
