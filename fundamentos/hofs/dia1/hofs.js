@@ -35,26 +35,41 @@
 // })
 // console.log(findMusic);
 
-const names = ['Mateus', 'José', 'Ana', 'Cláudia', 'Bruna'];
+// const names = ['Mateus', 'José', 'Ana', 'Cláudia', 'Bruna'];
 
-const hasName = (arr, name) => {
-    return arr.some((name2) => name === name2);
-};
+// const hasName = (arr, name) => {
+//     return arr.some((name2) => name === name2);
+// };
 
-console.log(hasName(names, 'Ana'));
-console.log(hasName(names, 'Pedro'));
+// console.log(hasName(names, 'Ana'));
+// console.log(hasName(names, 'Pedro'));
 
-const people = [
-    { name: 'Mateus', age: 18 },
-    { name: 'José', age: 16 },
-    { name: 'Ana', age: 23 },
-    { name: 'Cláudia', age: 20 },
-    { name: 'Bruna', age: 19 },
+// const people = [
+//     { name: 'Mateus', age: 18 },
+//     { name: 'José', age: 16 },
+//     { name: 'Ana', age: 23 },
+//     { name: 'Cláudia', age: 20 },
+//     { name: 'Bruna', age: 19 },
+//   ];
+  
+// const verifyAges = (array, age) => {
+//     return array.every((x) => x.age >= age)
+// }
+  
+//   console.log(verifyAges(people, 18));
+//   console.log(verifyAges(people, 14));
+const pessoas = [
+    { nome: 'Joana', idade: 37 },
+    { nome: 'Ana', idade: 25 },
+    { nome: 'João', idade: 32 },
+    { nome: 'Aline', idade: 28 },
   ];
-  
-const verifyAges = (array, age) => {
-    return array.every((x) => x.age >= age)
-}
-  
-  console.log(verifyAges(people, 18));
-  console.log(verifyAges(people, 14));
+
+pessoas.forEach((pessoa) => console.log(`Nome: ${pessoa.nome}`));
+const find = pessoas.find((pessoa) => pessoa.nome === 'Aline');
+const some = pessoas.some((pessoa) => pessoa.idade > 30);
+const every = pessoas.every((pessoa) => pessoa.idade > 30);
+console.log(find);
+console.log(some);
+console.log(every);
+
