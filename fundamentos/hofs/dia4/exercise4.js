@@ -27,6 +27,6 @@ const people = [
     // bornIn: nascido em
   ];
   // escreva filterPeople abaixo
-  const filterPeople = (peopleParemeter) => peopleParemeter.filter((pessoas) => (pessoas.bornIn <= 1999));
+  const filterPeople = (peopleParemeter) => peopleParemeter.filter((pessoas) => (pessoas.bornIn <= 1999 && pessoas.nationality === 'Australian'));
   
   console.log(filterPeople(people));
