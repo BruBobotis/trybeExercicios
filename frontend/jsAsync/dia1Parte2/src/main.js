@@ -1,17 +1,17 @@
 import validator from 'validator';
 
-const campoDeTexto = document.querySelector('#value');
+const text = document.querySelector('#value');
 const button = document.querySelector('#button');
-const seletor = document.querySelector('#option');
-const textoDeSaida = document.querySelector('#answer');
+const campo = document.querySelector('#option');
+const validacao = document.querySelector('#answer');
 
 button.addEventListener('click', (event) => {
-  event.preventDefault();
-  const campos = {
-    cpf: validator.isTaxID(campoDeTexto.value, 'pt-BR'),
-    hexColor: validator.isHexColor(campoDeTexto.value),
-    email: validator.isEmail(campoDeTexto.value),
-    url: validator.isURL(campoDeTexto.value),
-  };
-  textoDeSaida.innerHTML = `A validação retornou ${campos[seletor.value]}`;
+    event.preventDefault();
+    const campos = {
+        cpf: validator.isTaxID(text.value, 'pt-BR'),
+        hexColor: validator.isHexColor(text.value),
+        email: validator.isEmail(text.value),
+        url: validator.isURL(text.value)
+    };
+    validacao.innerHTML = `A validação retornou ${campos[campo.value]}`;
 });
