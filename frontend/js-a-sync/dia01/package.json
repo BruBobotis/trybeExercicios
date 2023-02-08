@@ -11,7 +11,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@trybe/eslint-config-frontend": "^1.8.3",
     "nanoid": "^4.0.1"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "eslint": "^8.33.0"
+  }
 }
