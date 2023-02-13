@@ -7,7 +7,7 @@ const petImage = document.querySelector("#random-pet-image");
 
 getDogButton.addEventListener("click", () => {
   fetch("https://dog.ceo/api/breeds/image/random")
-    .then((res) => res.json())
+    .then((result) => result.json())
     .then((data) => {
       const petURL = data.message;
 
@@ -17,7 +17,7 @@ getDogButton.addEventListener("click", () => {
 
 getCatButton.addEventListener("click", () => {
   fetch("https://aws.random.cat/meow")
-    .then((res) => res.json())
+    .then((result) => result.json())
     .then((data) => {
       const petURL = data.file;
 
@@ -30,7 +30,7 @@ surpriseMeButton.addEventListener("click", () => {
     fetch("https://aws.random.cat/meow"),
     fetch("https://dog.ceo/api/breeds/image/random"),
   ])
-    .then((res) => res.json())
+    .then((result) => result.json())
     .then((data) => {
       const petURL = data.file || data.message;
 
