@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "vite": "^4.1.1"
+  },
+  "scripts": {
+    "dev": "vite --open",
+    "lint": "eslint ./src"
+  }
+}
