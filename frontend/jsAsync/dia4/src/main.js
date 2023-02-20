@@ -1,20 +1,14 @@
 import Swal from 'sweetalert2';
 
-const buttonEl = document.getElementById('button');
-const inputEl = document.getElementById('input');
-const preEl = document.getElementById('pre');
+import getAddressFromCep from './getAddressFromCep';
+document.querySelector('button').addEventListener('click', handleClick);
 
-buttonEl.addEventListener('click', handleClick);
-
-async function handleClick() {
-  const cep = inputEl.value;
+export async function handleClick() {
+  const cep = document.querySelector('input').value;
 
   try {
-    const result = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
-    const data = await result.json();
-
-    preEl.innerHTML = JSON.stringify(data);
-    return data;
+    const addressData = await getAddressFromCep(cep);
+    document.querySelector('pre').innerHTML = JSON.stringify(addressData);
   } catch (error) {
     Swal.fire({
       icon: 'error',
@@ -23,4 +17,4 @@ async function handleClick() {
       footer: '<a href="">Why do I have this issue?</a>'
     })
   }
-}
+};
